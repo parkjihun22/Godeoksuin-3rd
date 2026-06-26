@@ -12,7 +12,7 @@ const footerData = {
   familySites: [
     {
       name: "고덕 수자인풍경채",
-      url: "https://www.sujain-modellhouse.co.kr/",
+      url: "https://godeok-sujainhouse.co.kr/",
     },
   ],
   links: [
