@@ -129,6 +129,7 @@ export default function Header() {
     visitDate: "",
   });
 
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setRegistration((prev) => ({ ...prev, [name]: value }));
