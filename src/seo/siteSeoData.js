@@ -128,7 +128,7 @@ const page = ({
 export const seoPages = {
   home: page({
     path: "/",
-    title: "고덕 수자인풍경채 | 평택 고덕국제신도시 아파트",
+    title: "고덕 수자인풍경채",
     description: siteSeo.defaultDescription,
     menu: "홈",
     priority: 1,
