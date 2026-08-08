@@ -19,7 +19,7 @@ const footerData = {
     { label: "브랜드소개", url: "/Brand/intro" },
     { label: "입지환경", url: "/LocationEnvironment/intro" },
     { label: "세대안내", url: "/FloorPlan/84A" },
-    { label: "홍보센터", url: "/Promotion/press" },
+    { label: "홍보센터", url: "/Promotion/Press" },
   ],
   copyright:
     "COPYRIGHT 2026 GODEOK SUJAIN. ALL RIGHTS RESERVED.",

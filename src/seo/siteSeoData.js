@@ -1,11 +1,14 @@
+const SITE_URL = "https://godeok-sujainhouse.co.kr";
+
 export const siteSeo = {
   siteName: "고덕 수자인풍경채",
-  siteUrl: "https://www.diarivalencia.com",
+  siteUrl: SITE_URL,
   phone: "1533-8848",
   ogImage: "/img/og/main.jpg",
   locale: "ko_KR",
-  organizationId: "https://hillstategodeok-elisth.co.kr/#organization",
-  websiteId: "https://hillstategodeok-elisth.co.kr/#website",
+  organizationId: `${SITE_URL}/#organization`,
+  websiteId: `${SITE_URL}/#website`,
+  defaultTitle: "고덕 수자인풍경채",
   defaultDescription:
     "고덕 수자인풍경채 공식 홈페이지입니다. 평택 고덕국제신도시 Abc-14BL·Abc-61BL 입지, 사업개요, 공급안내, 분양일정, 84㎡·101㎡ 평면도, E-모델하우스와 모델하우스 방문예약 정보를 확인하세요.",
   project: {
@@ -13,6 +16,11 @@ export const siteSeo = {
     addressRegion: "경기도",
     addressLocality: "평택시",
     streetAddress: "고덕국제신도시 Abc-14BL·Abc-61BL",
+    block: "Abc-14BL · Abc-61BL",
+    households: "1,126세대",
+    scale: "1·2단지 총 1,126세대",
+    unitTypes: ["84㎡", "101㎡"],
+    brand: "수자인풍경채",
     brands: ["수자인", "풍경채"],
     navigationSchemaName: "고덕 수자인풍경채 주요 메뉴",
   },
@@ -97,7 +105,7 @@ export const seoNavigation = [
   },
   {
     name: "홍보센터",
-    path: "/Promotion/Customer",
+    path: "/Promotion/Press",
     children: [
       { name: "언론보도", path: "/Promotion/Press" },
       { name: "관심고객등록", path: "/Promotion/Customer" },
@@ -324,9 +332,11 @@ export const seoPages = {
     path: "/Promotion/Press",
     title: "언론보도 | 고덕 수자인풍경채",
     description:
-      "고덕 수자인풍경채 언론보도 페이지입니다. 평택 고덕국제신도시 분양 소식, 사업 안내와 최신 홍보센터 정보를 확인하세요.",
+      "고덕 수자인풍경채 언론보도 페이지입니다. 평택 고덕국제신도시 Abc-14BL·Abc-61BL 공급 정보, 청약, 입지환경, E-모델하우스와 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
     menu: "홍보센터",
-    priority: 0.7,
+    image: "/img/og/main.jpg",
+    priority: 0.9,
+    changefreq: "daily",
   }),
   customer: page({
     path: "/Promotion/Customer",
@@ -356,7 +366,8 @@ export const seoPathMap = Object.fromEntries(
 
 export const getAbsoluteUrl = (path = "/") => {
   if (/^https?:\/\//.test(path)) return path;
-  return `${siteSeo.siteUrl}${path}`;
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return `${siteSeo.siteUrl}${normalizedPath}`;
 };
 
 export const getSeoPageByPath = (pathname = "/") => {

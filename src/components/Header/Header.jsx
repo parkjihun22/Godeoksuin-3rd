@@ -42,6 +42,7 @@ const T = {
   interior: "인테리어",
 
   promo: "홍보센터",
+  press: "언론보도",
   customer: "관심고객등록",
 
   phoneConsult: "전화상담",
@@ -112,7 +113,10 @@ const menuArray = [
   },
   {
     title: T.promo,
-    subMenu: [{ subTitle: T.customer, subUrl: "/Promotion/Customer" }],
+    subMenu: [
+      { subTitle: T.press, subUrl: "/Promotion/Press" },
+      { subTitle: T.customer, subUrl: "/Promotion/Customer" },
+    ],
   },
 ];
 
